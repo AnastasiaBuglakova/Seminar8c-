@@ -11,7 +11,7 @@ ShowNumbers(5);*/
 int SumOfDigit(int num) 
 {
     if(num != 0) return SumOfDigit(num/10) + num% 10;
-    return 0;
+    else return 0;
 }
 Console.WriteLine(SumOfDigit(1234));
 */
@@ -27,13 +27,14 @@ void ShowNumbers(int m, int n)
     if(m==n) Console.Write(m + " ");
     if(n<m) 
     {
-        ShowNumbers(n, m);
+        Console.Write(m + " ");
+        ShowNumbers(m-1, n); 
     }
     //if(m>n) ShowNumbers(m-1,n);
    //Console.Write(m + " ");
     //if(m<n) ShowNumbers(m+1,n);
 }
-ShowNumbers(0, 7);
+ShowNumbers(7, 0);
 //Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B.
 /*double Power(int a, int b)
 {
